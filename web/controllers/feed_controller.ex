@@ -5,7 +5,7 @@ defmodule StockTracker.FeedController do
 
   def index(conn, _params) do
     feeds = Repo.all(Feed)
-    render(conn, "index.json", feeds: feeds)
+    json(conn, %{things: "things"})
   end
 
   def create(conn, %{"feed" => feed_params}) do

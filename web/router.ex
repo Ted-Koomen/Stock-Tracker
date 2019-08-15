@@ -7,7 +7,7 @@ defmodule StockTracker.Router do
 
   scope "/api", StockTracker do
     pipe_through :api
+    resources "/feeds", FeedController, except: [:new, :edit]
   end
 
-  resources "/feeds", FeedController, except: [:new, :edit]
 end
